@@ -148,17 +148,17 @@ namespace OOP2ProjectTest
                 if (status == "Pending")
                 {
                     lblstatu.ForeColor = Color.Orange;
-                    lblstatu.Text = "⏳ Status: Pending - Waiting for agency response";
+                    lblstatu.Text = " Status: Pending - Waiting for agency response";
                 }
                 else if (status == "Responding")
                 {
                     lblstatu.ForeColor = Color.Blue;
-                    lblstatu.Text = "🚑 Status: Responding - Agency is on the way";
+                    lblstatu.Text = " Status: Responding - Agency is on the way";
                 }
                 else if (status == "Resolved")
                 {
                     lblstatu.ForeColor = Color.Green;
-                    lblstatu.Text = "✅ Status: Resolved - Emergency has been addressed";
+                    lblstatu.Text = " Status: Resolved - Emergency has been addressed";
                 }
             }
         }
