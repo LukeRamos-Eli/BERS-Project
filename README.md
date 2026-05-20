@@ -54,8 +54,3 @@ A Windows Forms desktop application for barangay emergency management built with
 | Ambulance | ambulance123 | ambulancepass |
 | Disaster  | disaster123  | disasterpass  |
 | Resident  | (Create your own account)    |
-
-## Author
-
-**Luke Jayden M. Ramos**  
-BSCpE - 2
