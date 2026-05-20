@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB5A1783-42D5-46EA-AF54-0865329C4445}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OOP2ProjectTest</RootNamespace>
+    <AssemblyName>OOP2ProjectTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.7\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3912.50, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3912.50\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3912.50, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3912.50\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3912.50, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3912.50\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OleDb, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.10.0.5\lib\net462\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.10.0.7\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.10.0.7\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.10.0.7\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admins_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admins_Form.Designer.cs">
+      <DependentUpon>Admins_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agency_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agency_Form.Designer.cs">
+      <DependentUpon>Agency_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyContacts_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmergencyContacts_Form.Designer.cs">
+      <DependentUpon>EmergencyContacts_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyContact_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmergencyContact_Form.Designer.cs">
+      <DependentUpon>EmergencyContact_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyReports_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmergencyReports_Form.Designer.cs">
+      <DependentUpon>EmergencyReports_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmergencyResponce_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmergencyResponce_Form.Designer.cs">
+      <DependentUpon>EmergencyResponce_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Form.Designer.cs">
+      <DependentUpon>Manage_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="log_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="log_in.Designer.cs">
+      <DependentUpon>log_in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapViewer_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapViewer_Form.Designer.cs">
+      <DependentUpon>MapViewer_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mapping.Designer.cs">
+      <DependentUpon>Mapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportEmergency_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportEmergency_Form.Designer.cs">
+      <DependentUpon>ReportEmergency_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidentLogin_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidentLogin_Form.Designer.cs">
+      <DependentUpon>ResidentLogin_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendResponce_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendResponce_Form.Designer.cs">
+      <DependentUpon>SendResponce_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="SignUp_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp_Form.Designer.cs">
+      <DependentUpon>SignUp_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Form.Designer.cs">
+      <DependentUpon>User_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReports_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReports_Form.Designer.cs">
+      <DependentUpon>ViewReports_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admins_Form.resx">
+      <DependentUpon>Admins_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agency_Form.resx">
+      <DependentUpon>Agency_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmergencyContacts_Form.resx">
+      <DependentUpon>EmergencyContacts_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmergencyContact_Form.resx">
+      <DependentUpon>EmergencyContact_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmergencyReports_Form.resx">
+      <DependentUpon>EmergencyReports_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmergencyResponce_Form.resx">
+      <DependentUpon>EmergencyResponce_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="log_in.resx">
+      <DependentUpon>log_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Form.resx">
+      <DependentUpon>Manage_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapViewer_Form.resx">
+      <DependentUpon>MapViewer_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping.resx">
+      <DependentUpon>Mapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportEmergency_Form.resx">
+      <DependentUpon>ReportEmergency_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidentLogin_Form.resx">
+      <DependentUpon>ResidentLogin_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendResponce_Form.resx">
+      <DependentUpon>SendResponce_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp_Form.resx">
+      <DependentUpon>SignUp_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Form.resx">
+      <DependentUpon>User_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReports_Form.resx">
+      <DependentUpon>ViewReports_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\responce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changes %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\responce %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\responce %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="map.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.3912.50\build\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+</Project>

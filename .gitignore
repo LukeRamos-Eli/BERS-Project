@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+
+# Database
+DataBase/
+*.accdb
+*.mdb
+*.ldb
+
+# NuGet packages
+packages/
+
+# Backup files
+*.bak
+*.tmp
+Thumbs.db
