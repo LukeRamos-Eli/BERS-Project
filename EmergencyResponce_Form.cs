@@ -36,7 +36,7 @@ namespace OOP2ProjectTest
                 {
                     myConn.Open();
 
-                    // Fixed query - use proper column names that exist
+                    
                     string query = @"SELECT r.ReportID, r.EmergencyType, r.ReportDateTime, r.Status, r.Response, r.Latitude, r.Longitude, b.BarangayName as Barangay
                                     FROM Reports r
                                     INNER JOIN Barangay b ON r.BarangayID = b.BarangayID
@@ -51,7 +51,7 @@ namespace OOP2ProjectTest
                         da.Fill(ds, "Reports");
                         dgvMyReports.DataSource = ds.Tables["Reports"];
 
-                        // Check if there are columns before setting widths
+                        
                         if (dgvMyReports.Columns.Count > 0)
                         {
                             if (dgvMyReports.Columns.Contains("ReportID"))
@@ -148,17 +148,17 @@ namespace OOP2ProjectTest
                 if (status == "Pending")
                 {
                     lblstatu.ForeColor = Color.Orange;
-                    lblstatu.Text = " Status: Pending - Waiting for agency response";
+                    lblstatu.Text = "Status: Pending - Waiting for agency response";
                 }
                 else if (status == "Responding")
                 {
                     lblstatu.ForeColor = Color.Blue;
-                    lblstatu.Text = " Status: Responding - Agency is on the way";
+                    lblstatu.Text = "Status: Responding - Agency is on the way";
                 }
                 else if (status == "Resolved")
                 {
                     lblstatu.ForeColor = Color.Green;
-                    lblstatu.Text = " Status: Resolved - Emergency has been addressed";
+                    lblstatu.Text = "Status: Resolved - Emergency has been addressed";
                 }
             }
         }
